@@ -4,6 +4,7 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
+//create objects
 var motorcycle = new Image();
 motorcycle.src = "image/motorcycle.jpg";
 var motorcycleX1 = 100;
@@ -11,6 +12,14 @@ var motorcycleX1 = 100;
 var motorcycleY1 = 400;
 var motorcycleWidth = 60;
 var motorcycleHeight = 35;
+
+var log1 = new Image();
+log1.src = "image/log.png";
+var log1X1 = 100;
+
+var log1Y1 = 190;
+var log1Width = 125;
+var log1Height = 35;
 
 var frog = new Image();
 frog.src = "image/frogger.png";
@@ -96,6 +105,16 @@ function drawMotorcycle(){
   }
 }
 
+function drawlog1(){
+  ctx.drawImage(log1,0,0,60,50,log1X1,log1Y1,log1Width,log1Height);
+  if(log1X1 < canvas.width + 100){
+    log1X1 = log1X1 + 5;
+  }
+  else {
+    log1X1 = -100;
+  }
+}
+
 function collision(){
   if (motorcycleX1 <= x + width &&
   motorcycleX1 + motorcycleWidth >= x &&
@@ -103,6 +122,12 @@ function collision(){
   motorcycleY1 <= y + height){
     y = 488;
   }
+  if (log1X1 <= x + width &&
+    log1X1 + log1Width >= x &&
+    log1Y1 + log1Height >= y &&
+    log1Y1 <= y + height){
+      y = 488;
+    }
 }
 
 function moveFrog(){
@@ -152,6 +177,7 @@ function draw(){
   drawFrog();
   moveFrog();
   drawMotorcycle();
+  drawlog1();
   collision();
 
 
