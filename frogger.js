@@ -5,7 +5,7 @@ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var motorcycle = new Image();
-motorcycle.src = "motorcycle.jpg";
+motorcycle.src = "image/motorcycle.jpg";
 var motorcycleX1 = 100;
 
 var motorcycleY1 = 400;
@@ -13,7 +13,7 @@ var motorcycleWidth = 60;
 var motorcycleHeight = 35;
 
 var frog = new Image();
-frog.src = "frogger.jfif";
+frog.src = "image/frogger.jfif";
 var sx = 0;
 var sy = 0;
 var swidth = 70;
