@@ -13,7 +13,7 @@ var motorcycleWidth = 60;
 var motorcycleHeight = 35;
 
 var frog = new Image();
-frog.src = "image/frogger.jfif";
+frog.src = "image/frogger.png";
 var sx = 0;
 var sy = 0;
 var swidth = 70;
