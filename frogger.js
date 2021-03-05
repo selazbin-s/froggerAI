@@ -17,7 +17,7 @@ var log1 = new Image();
 log1.src = "image/log.png";
 var log1X1 = 100;
 
-var log1Y1 = 190;
+var log1Y1 = 180;
 var log1Width = 125;
 var log1Height = 35;
 
@@ -46,38 +46,38 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 function drawBackground(){
-ctx.fillStyle = "lime";
-ctx.fillRect(0,440,570,45);
-ctx.fillRect(0,220,570,45);
+  ctx.fillStyle = "lime";
+  ctx.fillRect(0,440,570,45);
+  ctx.fillRect(0,220,570,45);
 
-ctx.beginPath();
-ctx.moveTo(0, 395);
-ctx.lineTo(570,395);
-ctx.strokeStyle = "white";
-ctx.setLineDash([5]);
-ctx.strokeWidth = 2;
-ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(0, 395);
+  ctx.lineTo(570,395);
+  ctx.strokeStyle = "white";
+  ctx.setLineDash([5]);
+  ctx.strokeWidth = 2;
+  ctx.stroke();
 
-ctx.beginPath();
-ctx.moveTo(0,350);
-ctx.lineTo(570,350);
-ctx.strokeStyle = "white";
-ctx.setLineDash([0]);
-ctx.strokeWidth = 4;
-ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(0,350);
+  ctx.lineTo(570,350);
+  ctx.strokeStyle = "white";
+  ctx.setLineDash([0]);
+  ctx.strokeWidth = 4;
+  ctx.stroke();
 
-ctx.beginPath();
-ctx.moveTo(0,305);
-ctx.lineTo(570,305);
-ctx.strokeStyle = "white";
-ctx.setLineDash([5]);
-ctx.strokeWidth = 2;
-ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(0,305);
+  ctx.lineTo(570,305);
+  ctx.strokeStyle = "white";
+  ctx.setLineDash([5]);
+  ctx.strokeWidth = 2;
+  ctx.stroke();
 
 
 
-ctx.fillStyle = "blue";
-ctx.fillRect(0, 0, 570, 220);
+  ctx.fillStyle = "blue";
+  ctx.fillRect(0, 0, 570, 220);
 //})
 }
 
@@ -171,6 +171,7 @@ function drawFrog(){
   ctx.drawImage(frog, sx, sy, swidth, sheight, x, y, width, height);
 }
 
+
 function draw(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
   drawBackground();
@@ -184,4 +185,6 @@ function draw(){
   requestAnimationFrame(draw);
 }
 
+
 draw();
+
