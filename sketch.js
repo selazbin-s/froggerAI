@@ -3,7 +3,7 @@ let cars = [];
 let logs = [];
 let grid = 50;
 
-var img;
+let img;
 
 
 function resetGame(){
@@ -171,7 +171,7 @@ function keyPressed() {
 
 const imgs = []
 
-function preload()
-{
-    imgs.push(loadImage('image/frogger.png'));
-}
+// function preload()
+// {
+//     imgs.push(loadImage('image/frogger.png'));
+// }
