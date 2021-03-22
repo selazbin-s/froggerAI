@@ -7,6 +7,10 @@ let img_frog;
 let img_car;
 let img_log;
 
+let car1;
+let car2;
+let car3;
+
 function resetGame(){
 
     frog = new Frog(width / 2 - grid / 2, height - grid, grid);
@@ -45,11 +49,9 @@ function setup(){
     }
 
     // ROW 4
-    index = 0;
     for (i = 0; i < 2; i++) {
         let x = i * 250 + 100;
-        logs[index] = new Log(x, height - grid * 5, grid, grid, -2.3);
-        //cars[index] = new Car(x, height - grid * 5, grid, grid, -2.3);
+        cars[index] = new Car(x, height - grid * 5, grid, grid, -2.3);
         index ++;
     }
 
@@ -57,23 +59,24 @@ function setup(){
     //intentionally left blank, rest spot
 
     // ROW 6
+    index = 0;
     for (i = 0; i < 3; i++) {
         let x = i * 200 + 30;
-        logs[index] = new Log(x, height - grid * 7, grid * 2, grid, -1.3);
+        logs[index] = new Log(x, height - grid * 7, grid * 1, grid, -1.3);
         index ++;
     }
 
     // ROW 7
     for (i = 0; i < 2; i++) {
         let x = i * 400 + 10;
-        logs[index] = new Log(x, height - grid * 8, grid * 2, grid, 0.5);
+        logs[index] = new Log(x, height - grid * 8, grid * 1, grid, 0.5);
         index ++;
     }
 
     // ROW 8
     for (i = 0; i < 2; i++) {
         let x = i * 400 + 10;
-        logs[index] = new Log(x, height - grid * 9, grid * 2, grid, -2.5);
+        logs[index] = new Log(x, height - grid * 9, grid * 1, grid, -2.5);
         index ++;
     }
 }
@@ -162,8 +165,18 @@ function preload()
 {
     img_frog=loadImage('https://cdn.friendlystock.com/wp-content/uploads/2019/07/4-chibi-kawaii-frog-cartoon-clipart.jpg');
 
-    img_car=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Free-clicpart-cartoon-cars-clipart-the-cliparts.png');
+    img_log=loadImage('https://clipartix.com/wp-content/uploads/2017/02/Wood-log-clipart.png');
 
-    img_log=loadImage('https://media.istockphoto.com/vectors/cartoon-log-vector-id890818862?s=612x612');
+    car1=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-3.png');
+    car2=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-2.png');
+    car3=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images.png');
 }
 
+function randomCar()
+{
+    let car_array = [car1,car2,car3];
+    img_car = random(car_array);
+
+
+    
+}
