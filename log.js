@@ -8,6 +8,10 @@ class Log extends Car {
 
     }
 
+    show(){
 
+        image(img_log,this.x, this.y, this.width, this.width);
+
+    }
 
 }

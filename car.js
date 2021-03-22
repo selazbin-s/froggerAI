@@ -17,6 +17,7 @@ class Car extends Rectangle {
         fill(300);
 
         rect(this.x, this.y, this.width, this.height);
+        image(img_car,this.x, this.y, this.width, this.width);
 
     }
 
