@@ -11,6 +11,9 @@ let car1;
 let car2;
 let car3;
 
+let a=0;
+let car_array = [car1,car2,car3];
+
 function resetGame(){
 
     frog = new Frog(width / 2 - grid / 2, height - grid, grid);
@@ -112,6 +115,9 @@ function drawBackground(){
 
 function drawAnimation(){
     for(let i = 0; i < cars.length; i++){
+        
+        randomCar();
+
         cars[i].update();
         cars[i].show();
         
@@ -167,10 +173,13 @@ function preload()
 
     img_log=loadImage('https://clipartix.com/wp-content/uploads/2017/02/Wood-log-clipart.png');
 
-    car1=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-3.png');
-    car2=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-2.png');
-    car3=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images.png');
+    car1=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-3.png'); //yellow
+    car2=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-2.png'); //green
+    car3=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images.png'); //blue
+
 }
+
+
 
 function randomCar()
 {

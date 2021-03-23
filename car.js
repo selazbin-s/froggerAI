@@ -17,7 +17,7 @@ class Car extends Rectangle {
         fill(300);
 
         rect(this.x, this.y, this.width, this.height);
-        randomCar();
+        
         image(img_car,this.x, this.y, this.width, this.width);
 
     }
@@ -27,8 +27,6 @@ class Car extends Rectangle {
     update(){
 
        this.x += this.speed;
-
-
 
        if(this.speed > 0 && this.x > width+grid){
 
