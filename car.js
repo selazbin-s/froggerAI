@@ -1,7 +1,7 @@
 class Car extends Rectangle {
 
 
-
+//added color to constructor
     constructor(x, y, width, height, speed, color) {
 
         super(x, y, width, height);
@@ -16,11 +16,23 @@ class Car extends Rectangle {
 
     show(){
 
-        fill(300);
-
-        //rect(this.x, this.y, this.width, this.height);
+        // if(color=car1)
+        // {
+        //     fill('yellow');
+        // }
+        // else if(color=car2)
+        // {
+        //     fill('green');
+        // }
+        // else
+        // {
+        //     fill('blue')
+        // }
+        // rect(this.x, this.y, this.width, this.height);
         
-        image(color,this.x, this.y, this.width, this.width);
+        
+        //use color from constructor as image
+        image(this.color,this.x, this.y, this.width, this.width);
 
     }
 

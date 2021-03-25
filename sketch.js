@@ -22,6 +22,20 @@ function resetGame(){
 
 }
 
+function preload()
+{
+    img_frog=loadImage('https://cdn.friendlystock.com/wp-content/uploads/2019/07/4-chibi-kawaii-frog-cartoon-clipart.jpg');
+
+    img_log=loadImage('https://clipartix.com/wp-content/uploads/2017/02/Wood-log-clipart.png');
+
+    car1=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-3.png'); //yellow
+    car2=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-2.png'); //green
+    car3=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images.png'); //blue
+
+    //img_car = car1;
+
+}
+
 function setup(){
     
     createCanvas(500,500);
@@ -34,13 +48,17 @@ function setup(){
     for (let i = 0; i < 2; i++) {
         let x = i * 300;
         cars[index] = new Car(x, height - grid * 2, grid, grid, 2, car1);
+        print('The value of index is ' + index);
         index ++;
+        // cars[0]=new Car(x, height - grid * 2, grid, grid, 2, car1);
+        // cars[1]=new Car(x, height - grid * 2, grid, grid, 2, car1);
+
     }
 
     // ROW 2
     for (i = 0; i < 2; i++) {
         let x = i * 200 +150;
-        cars[index] = new Car(x, height - grid * 3, grid, grid, 1.2, car1);
+        cars[index] = new Car(x, height - grid * 3, grid, grid, 1.2, car2);
         index ++;
     }
 
@@ -114,10 +132,8 @@ function drawBackground(){
 }
 
 function drawAnimation(){
-    for(let i = 0; i < cars.length; i++){
-        
-        //randomCar();
-
+    //for(let i = 0; i < cars.length; i++){
+    for(let i = 0; i < 4; i++){
         cars[i].update();
         cars[i].show();
         
@@ -165,20 +181,6 @@ function keyPressed() {
     }else if(keyCode === LEFT_ARROW){
         frog.move(-1, 0);
     }
-}
-
-function preload()
-{
-    img_frog=loadImage('https://cdn.friendlystock.com/wp-content/uploads/2019/07/4-chibi-kawaii-frog-cartoon-clipart.jpg');
-
-    img_log=loadImage('https://clipartix.com/wp-content/uploads/2017/02/Wood-log-clipart.png');
-
-    car1=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-3.png'); //yellow
-    car2=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-2.png'); //green
-    car3=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images.png'); //blue
-
-    //img_car = car1;
-
 }
 
 
