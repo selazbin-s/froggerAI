@@ -101,12 +101,14 @@ function setup(){
 
 function drawBackground(){
     // grass safety lines
-    fill('lime');
+    let green=color('#02E866');
+    fill('green');
     rect(0, 0, width,grid); //top
     rect(0, height-grid,width,grid); //bottom
     rect(0, grid*4,width,grid); //middle
     //water
-    fill('blue');
+    let blue=color('#0A68FF');
+    fill(blue);
     rect(0,grid,width,grid*3);
     //lines of road
     stroke('white');
