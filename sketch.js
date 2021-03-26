@@ -4,8 +4,9 @@ let logs = [];
 let grid = 50;
 
 let img_frog;
-let img_car;
+
 let img_log;
+let img_lilypad;
 
 let car1;
 let car2;
@@ -27,6 +28,7 @@ function preload()
     img_frog=loadImage('https://cdn.friendlystock.com/wp-content/uploads/2019/07/4-chibi-kawaii-frog-cartoon-clipart.jpg');
 
     img_log=loadImage('https://clipartix.com/wp-content/uploads/2017/02/Wood-log-clipart.png');
+    img_lilypad=loadImage('https://clipartix.com/wp-content/uploads/2018/03/lily-clip-art-2018-56.png');
 
     car1=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-3.png'); //yellow
     car2=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-2.png'); //green
@@ -78,21 +80,21 @@ function setup(){
     index = 0;
     for (i = 0; i < 3; i++) {
         let x = i * 200 + 30;
-        logs[index] = new Log(x, height - grid * 7, grid * 1, grid, -1.3);
+        logs[index] = new Log(x, height - grid * 7, grid * 1, grid, -1.3, img_log);
         index ++;
     }
 
     // ROW 7
     for (i = 0; i < 2; i++) {
         let x = i * 400 + 10;
-        logs[index] = new Log(x, height - grid * 8, grid * 1, grid, 0.5);
+        logs[index] = new Log(x, height - grid * 8, grid * 1, grid, 0.5, img_lilypad);
         index ++;
     }
 
     // ROW 8
     for (i = 0; i < 2; i++) {
         let x = i * 400 + 10;
-        logs[index] = new Log(x, height - grid * 9, grid * 1, grid, -2.5);
+        logs[index] = new Log(x, height - grid * 9, grid * 1, grid, -2.5, img_log);
         index ++;
     }
 }
