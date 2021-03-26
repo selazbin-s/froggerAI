@@ -31,8 +31,7 @@ function preload()
     car1=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-3.png'); //yellow
     car2=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images-2.png'); //green
     car3=loadImage('https://clipartix.com/wp-content/uploads/2016/08/Cars-car-clipart-free-clipart-images.png'); //blue
-
-    //img_car = car1;
+    car4=loadImage('https://clipartix.com/wp-content/uploads/2018/09/red-clipart-2018-16.png'); //red
 
 }
 
@@ -47,12 +46,8 @@ function setup(){
     // ROW 1
     for (let i = 0; i < 2; i++) {
         let x = i * 300;
-        cars[index] = new Car(x, height - grid * 2, grid, grid, 2, car1);
-        print('The value of index is ' + index);
+        cars[index] = new Car(x, height - grid * 2, grid, grid, 2, car1); 
         index ++;
-        // cars[0]=new Car(x, height - grid * 2, grid, grid, 2, car1);
-        // cars[1]=new Car(x, height - grid * 2, grid, grid, 2, car1);
-
     }
 
     // ROW 2
@@ -62,44 +57,44 @@ function setup(){
         index ++;
     }
 
-    // // ROW 3
-    // for (i = 0; i < 4; i++) {
-    //     let x = i * 150 + 25;
-    //     cars[index] = new Car(x, height - grid * 4, grid, grid, -1.2);
-    //     index ++;
-    // }
+    // ROW 3
+    for (i = 0; i < 3; i++) {
+        let x = i * 150 + 25;
+        cars[index] = new Car(x, height - grid * 4, grid, grid, -1.2, car3);
+        index ++;
+    }
 
-    // // ROW 4
-    // for (i = 0; i < 2; i++) {
-    //     let x = i * 250 + 100;
-    //     cars[index] = new Car(x, height - grid * 5, grid, grid, -2.3);
-    //     index ++;
-    // }
+    // ROW 4
+    for (i = 0; i < 2; i++) {
+        let x = i * 250 + 100;
+        cars[index] = new Car(x, height - grid * 5, grid, grid, -2.3, car4);
+        index ++;
+    }
 
     // //ROW 5
     // //intentionally left blank, rest spot
 
-    // // ROW 6
-    // index = 0;
-    // for (i = 0; i < 3; i++) {
-    //     let x = i * 200 + 30;
-    //     logs[index] = new Log(x, height - grid * 7, grid * 1, grid, -1.3);
-    //     index ++;
-    // }
+    // ROW 6
+    index = 0;
+    for (i = 0; i < 3; i++) {
+        let x = i * 200 + 30;
+        logs[index] = new Log(x, height - grid * 7, grid * 1, grid, -1.3);
+        index ++;
+    }
 
-    // // ROW 7
-    // for (i = 0; i < 2; i++) {
-    //     let x = i * 400 + 10;
-    //     logs[index] = new Log(x, height - grid * 8, grid * 1, grid, 0.5);
-    //     index ++;
-    // }
+    // ROW 7
+    for (i = 0; i < 2; i++) {
+        let x = i * 400 + 10;
+        logs[index] = new Log(x, height - grid * 8, grid * 1, grid, 0.5);
+        index ++;
+    }
 
-    // // ROW 8
-    // for (i = 0; i < 2; i++) {
-    //     let x = i * 400 + 10;
-    //     logs[index] = new Log(x, height - grid * 9, grid * 1, grid, -2.5);
-    //     index ++;
-    // }
+    // ROW 8
+    for (i = 0; i < 2; i++) {
+        let x = i * 400 + 10;
+        logs[index] = new Log(x, height - grid * 9, grid * 1, grid, -2.5);
+        index ++;
+    }
 }
 
 function drawBackground(){
@@ -132,8 +127,7 @@ function drawBackground(){
 }
 
 function drawAnimation(){
-    //for(let i = 0; i < cars.length; i++){
-    for(let i = 0; i < 4; i++){
+    for(let i = 0; i < cars.length; i++){
         cars[i].update();
         cars[i].show();
         
@@ -158,14 +152,10 @@ function draw(){
   
     background(0);
     drawBackground();
-
     drawAnimation();
 
     frog.update();
-
     frog.show();
-
-    
 
 }
 
@@ -183,13 +173,3 @@ function keyPressed() {
     }
 }
 
-
-
-// function randomCar()
-// {
-//     let car_array = [car1,car2,car3];
-//     img_car = random(car_array);
-
-
-    
-// }

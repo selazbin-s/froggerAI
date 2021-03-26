@@ -12,48 +12,35 @@ class Car extends Rectangle {
 
     }
 
-
-
     show(){
-
-        // if(color=car1)
-        // {
-        //     fill('yellow');
-        // }
-        // else if(color=car2)
-        // {
-        //     fill('green');
-        // }
-        // else
-        // {
-        //     fill('blue')
-        // }
-        // rect(this.x, this.y, this.width, this.height);
-        
-        
         //use color from constructor as image
         image(this.color,this.x, this.y, this.width, this.width);
 
     }
 
-
-
     update(){
+    
+        //array of options
+        let car_array = [car1,car2,car3, car4];
 
        this.x += this.speed;
 
        if(this.speed > 0 && this.x > width+grid){
 
            this.x = - this.width - grid;
+           
+           //going right
+           this.color = random(car_array)
 
        } else if(this.speed < 0 && this.x < -this.width-grid){
 
             this.x = width + grid;
 
+            //going left
+            this.color = random(car_array)
+
        }
 
     }
-
-
 
 }
