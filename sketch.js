@@ -25,7 +25,7 @@ function resetGame(){
 
 function preload()
 {
-    img_frog=loadImage('https://cdn.friendlystock.com/wp-content/uploads/2019/07/4-chibi-kawaii-frog-cartoon-clipart.jpg');
+    img_frog=loadImage('https://clipartix.com/wp-content/uploads/2016/04/Cute-baby-frog-clipart-my-blog.png');
 
     img_log=loadImage('https://clipartix.com/wp-content/uploads/2017/02/Wood-log-clipart.png');
     img_lilypad=loadImage('https://clipartix.com/wp-content/uploads/2018/03/lily-clip-art-2018-56.png');
