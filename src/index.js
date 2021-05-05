@@ -1,4 +1,10 @@
-import { draw } from "./components/p5/frogger.js";
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import $ from 'jquery';
+//import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-draw();
-//ReactDOM.render(<draw />, document.getElementById("root"));
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/app/App';
+
+ReactDOM.render(<App />, document.getElementById('App'))
