@@ -8,11 +8,12 @@ class DeveloperCard extends React.Component{
 
     renderCard(card){
         return(
-            <Card>
+            <Card className="my-4 text-center" bg="dark" text="white">
+                <Card.Img src={card.image} />
                 <Card.Body>
-                    <Card.Img variant="top" src={card.image} />
                     <Card.Title>{card.name}</Card.Title>
-                    <Card.Text>{card.description}</Card.Text>
+                    <Card.Subtitle>{card.role}</Card.Subtitle>
+                    <Card.Link active="false" href={card.github}>Github</Card.Link>
                 </Card.Body>
             </Card>
         )

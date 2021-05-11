@@ -1,21 +1,23 @@
 import React from 'react';
-import CustomNavbar from './navbar';
-import DeveloperCard from './developerCards';
-import {CardDeck} from 'react-bootstrap';
-import {developers} from './developers';
+import { Route, Switch } from 'react-router-dom';
+
+import Home from '../webpages/Home'
+import Game from '../webpages/Game';
+import Source from '../webpages/Source';
+import CustomNavbar from './CustomNavbar';
 
 class App extends React.Component{
     render(){
-        return(
-            <div>
+        return (
+            <main>
                 <CustomNavbar />
-                <CardDeck>
-                    {developers.map((dev) => (
-                    <DeveloperCard items={dev} />
-                    ))}
-                </CardDeck>
-            </div>
-        ); 
+                <Switch>
+                    <Route path="/"exact> <Home /> </Route>
+                    <Route path="/game"> <Game /> </Route>
+                    <Route path="/source"> <Source /> </Route>
+                </Switch>
+            </main>
+        );
     }
 }
 export default App;
