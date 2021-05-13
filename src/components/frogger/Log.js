@@ -3,7 +3,8 @@ import Car from './Car';
 class Log extends Car {
     constructor(x, y, width, height, speed, log, lilypad) {
         super(x, y, width, height, speed);
-        this.color = log;
+        let log_array = [log, lilypad];
+        this.color = log_array[Math.round(Math.random())];
     }
 
     show(p){
@@ -11,18 +12,11 @@ class Log extends Car {
     }
 
     update(p){
-    
-        //array of options
-        let log_array = [this.img_log, this.img_lilypad];
         this.x += this.speed;
-        if(this.speed > 0 && this.x > p.width + p.grid){
-           this.x = - this.width - p.grid;
-           //going right
-           //this.color = p.random(log_array)
-        } else if(this.speed < 0 && this.x < -this.width- p.grid){
-            this.x = p.width + p.grid;
-            //going left
-            //this.color = p.random(log_array)
+        if(this.speed > 0 && this.x > p.width + this.height){   //Going Left
+           this.x = - this.width - this.height;
+        } else if(this.speed < 0 && this.x < -this.width- this.height){ //Going Right
+            this.x = p.width + this.height;
         }
     }
 }

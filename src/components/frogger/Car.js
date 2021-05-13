@@ -1,10 +1,11 @@
 import Rectangle from './Rectangle';
 class Car extends Rectangle {
     //added color to constructor
-    constructor(x, y, width, height, speed, color) {
+    constructor(x, y, width, height, speed, car1, car2, car3, car4) {
         super(x, y, width, height);
         this.speed = speed;
-        this.color = color;
+        let car_array = [car1,car2,car3,car4];
+        this.color = car_array[Math.floor(Math.random()*4)];
     }
 
     show(p) {
@@ -16,12 +17,12 @@ class Car extends Rectangle {
         //array of options
         let car_array = this.color;
         this.x += this.speed;
-        if (this.speed > 0 && this.x > p.width + p.grid) {
-            this.x = - this.width - p.grid;
+        if (this.speed > 0 && this.x > p.width + this.width) {
+            this.x = - this.width - this.width;
             //going right
             //this.color = p.random(car_array);
-        } else if (this.speed < 0 && this.x < -this.width - p.grid) {
-            this.x = p.width + p.grid;
+        } else if (this.speed < 0 && this.x < -this.width - this.width) {
+            this.x = p.width + this.width;
             //going left
             //this.color = p.random(car_array);
         }

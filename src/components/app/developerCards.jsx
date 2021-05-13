@@ -2,10 +2,6 @@ import React from 'react';
 import {Card} from 'react-bootstrap';
 import '../../index.css'
 class DeveloperCard extends React.Component{
-    constructor(props){
-        super(props);
-    }
-
     renderCard(card){
         return(
             <Card className="my-4 text-center" bg="dark" text="white">

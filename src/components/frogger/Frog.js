@@ -18,13 +18,11 @@ class Frog extends Rectangle {
     }
 
     show(p) {
-        //fill(0, 255, 0, 200);
-        //rect(this.x, this.y, this.width, this.width);
         p.image(this.img_frog, this.x, this.y, this.width, this.width);
     }
     move(p, xdir, ydir) {
-        this.x += xdir * p.grid;
-        this.y += ydir * p.grid;
+        this.x += xdir * this.width;
+        this.y += ydir * this.width;
     }
 }
 export default Frog;
