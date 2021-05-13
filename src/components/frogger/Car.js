@@ -1,4 +1,3 @@
-/*
 import Rectangle from './Rectangle';
 class Car extends Rectangle {
     //added color to constructor
@@ -8,26 +7,25 @@ class Car extends Rectangle {
         this.color = color;
     }
 
-    show() {
+    show(p) {
         //use color from constructor as image
-        image(this.color, this.x, this.y, this.width, this.width);
+        p.image(this.color, this.x, this.y, this.width, this.width);
     }
 
-    update() {
+    update(p) {
         //array of options
-        let car_array = [car1, car2, car3, car4];
+        let car_array = this.color;
         this.x += this.speed;
-        if (this.speed > 0 && this.x > width + grid) {
-            this.x = - this.width - grid;
+        if (this.speed > 0 && this.x > p.width + p.grid) {
+            this.x = - this.width - p.grid;
             //going right
-            this.color = random(car_array);
-        } else if (this.speed < 0 && this.x < -this.width - grid) {
-            this.x = width + grid;
+            //this.color = p.random(car_array);
+        } else if (this.speed < 0 && this.x < -this.width - p.grid) {
+            this.x = p.width + p.grid;
             //going left
-            this.color = random(car_array);
+            //this.color = p.random(car_array);
         }
     }
 }
 
 export default Car;
-*/

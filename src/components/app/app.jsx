@@ -9,7 +9,7 @@ import CustomNavbar from './CustomNavbar';
 class App extends React.Component{
     render(){
         return (
-            <main>
+            <main className="">
                 <CustomNavbar />
                 <Switch>
                     <Route path="/"exact> <Home /> </Route>

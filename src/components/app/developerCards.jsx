@@ -1,6 +1,6 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
-
+import '../../index.css'
 class DeveloperCard extends React.Component{
     constructor(props){
         super(props);
@@ -9,7 +9,7 @@ class DeveloperCard extends React.Component{
     renderCard(card){
         return(
             <Card className="my-4 text-center" bg="dark" text="white">
-                <Card.Img src={card.image} />
+                <Card.Img src={card.image} className="img-fluid developer-Images"/>
                 <Card.Body>
                     <Card.Title>{card.name}</Card.Title>
                     <Card.Subtitle>{card.role}</Card.Subtitle>

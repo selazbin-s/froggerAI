@@ -1,4 +1,3 @@
-/*
 class Rectangle {
     constructor(x, y, width, height) {
         this.x = x;
@@ -24,4 +23,3 @@ class Rectangle {
     }
 }
 export default Rectangle;
-*/

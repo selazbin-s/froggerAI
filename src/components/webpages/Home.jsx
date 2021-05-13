@@ -7,7 +7,7 @@ class Home extends React.Component{
     render(){
         return(
             <div>
-                <CardDeck>
+                <CardDeck className = "w-50 mx-auto">
                     {developers.map((dev) => (
                         <DeveloperCard items={dev} />
                     ))}
