@@ -20,9 +20,11 @@ Frogger navigates obstacles to get across a road and river, reaching the finish 
 * Project requirements
 
 #### **How to run the website**
-The website can be easily run by just tping in: 
+To run the website you first need to install all the required nodes. A simple way to do this is to run ```npm install```. This will take a while.
 
-```npm run start```
+Once that is done simply just run: 
+
+```npm start```
 
 Into a terminal window. If using an IDE that has npm scripts easily accesible then use that. **Make sure you have NPM installed on your local machine**
 
