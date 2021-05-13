@@ -17,22 +17,22 @@ pygame.display.set_caption('Frogger-AI-bot')
 clock = pygame.time.Clock()
 
 all_sprites = pygame.sprite.Group()
-backgroundImage = pygame.image.load('images/backgroundtest.png')
+backgroundImage = pygame.image.load('./images/backgroundtest.png')
 
 frogs = pygame.sprite.Group()
 
-frog = pygame.image.load('images/frogAlive.gif')
-frogDead = pygame.image.load('images/frogDead.gif')
+frog = pygame.image.load('./images/frogAlive.gif')
+frogDead = pygame.image.load('./images/frogDead.gif')
 
-carRed = pygame.image.load('images/carRed.png') 
-carBlue = pygame.image.load('images/carBlue.png')  
-carYellow = pygame.image.load('images/carYellow.png')
-carGreen = pygame.image.load('images/carGreen.png') 
+carRed = pygame.image.load('./images/carRed.png') 
+carBlue = pygame.image.load('./images/carBlue.png')  
+carYellow = pygame.image.load('./images/carYellow.png')
+carGreen = pygame.image.load('./images/carGreen.png') 
 
 
-log = pygame.image.load('images/logtest.gif')
-lilyPad = pygame.image.load('images/lilypad.png')
-loglog = pygame.image.load('images/logtest.gif')
+log = pygame.image.load('./images/logtest.gif')
+lilyPad = pygame.image.load('./images/lilypad.png')
+loglog = pygame.image.load('./images/logtest.gif')
 
 class Pop:
     mostFitFrog = 0  

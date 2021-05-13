@@ -35,9 +35,10 @@ The program requires you to have pygame installed and recommends you have the la
 
 Within a terminal window. Once that is done run:
 
-```python AIgame.py```
+```python game.py```
 or
-```python3 AIgame.py```
+```python3 game.py```
+**Make sure you have your root path set to where game.py is stored!**
 if your $PATH variable doesn't associate python3 with the python command
 
 ### **Project Requirements**
