@@ -11,8 +11,10 @@ class Source extends React.Component {
                 <Card className="my-4">
                     <Card.Header className="h3">The Game</Card.Header>
                     <Card.Body>
-                        <Card.Title>An overview about devloping the game</Card.Title>
-                        <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat. </Card.Text>
+                        <Card.Title>Frogger, an overview</Card.Title>
+                        <Card.Text>Our Frogger game was modeled after the original 1980s arcade game created by Sega. It assumes that all objects are rectangles and primarily is concerned with if two objects are intersecting. If two objects are intersecting, a frog object and car object for example, then it assumes that the frog has been squashed by the car and the frog must re-spawn at the starting position. The game can be played over and over until the frog finally reaches the end of the river without running into any objects. </Card.Text>
+                        <Card.Title>Devloping the game</Card.Title>
+                        <Card.Text>The game was devloped with P5.js with an included P5 to React wrapper (necessary for running P5 code within React). Most of the game's code revolves around a single class with some variants thrown in for image settings and game logic.</Card.Text>
                     </Card.Body>
                 </Card>
                 <Card className="my-4">
